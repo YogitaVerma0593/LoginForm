@@ -1,0 +1,107 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image:url(/LoginForm/form-bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Container */
+.login-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    position: relative;
+}
+
+/* Heading */
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    background: linear-gradient(to right, #ef5ea1, #9b5de5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Input Group */
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.form-input {
+    width: 100%;
+    padding: 16px 12px 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+    font-size: 16px;
+    background: transparent;
+}
+
+.form-input:hover,
+.form-input:focus{
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image:
+        linear-gradient(#fff, #fff), /* background */
+        linear-gradient(to right, #ef5ea1, #9b5de5); /* border */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+
+
+/* Labels */
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    background: #fff;
+    padding: 0 4px;
+    transition: 0.3s ease;
+}
+
+/* Floating label on focus or not empty */
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: -10px;
+    left: 12px;
+    font-size: 13px;
+    color: #9b5de5;
+}
+
+/* Submit Button */
+#submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ef5ea1, #9b5de5);
+    transition: box-shadow 0.3s ease;
+}
+
+#submit-button:hover {
+    box-shadow: 0 5px 15px rgba(155, 93, 229, 0.4);
+}

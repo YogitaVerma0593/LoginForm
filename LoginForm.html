@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="LoginForm.css">
+</head>
+
+<body>
+    <div class="login-form">
+        <h1>Login</h1>
+        <form id="login">
+            <div class="form-group">
+                <input type="text" required class="form-input" placeholder=" " id="name">
+                <label for="name" class="form-label">Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" required class="form-input" placeholder=" " id="email">
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+    </div>
+    <script>
+        document.getElementById('login').addEventListener("submit", (event) => {
+            event.preventDefault();
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            if (name === "" || email === "") {
+                alert("Please fill out the details");
+            } else {
+                alert("Form submitted successfully");
+                document.getElementById("login-form").reset();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
