@@ -58,8 +58,8 @@ body {
     border: 2px solid transparent;
     border-radius: 8px;
     background-image:
-        linear-gradient(#fff, #fff),
-        linear-gradient(to right, #ef5ea1, #9b5de5); 
+        linear-gradient(#fff, #fff), /* background */
+        linear-gradient(to right, #ef5ea1, #9b5de5); /* border */
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
